@@ -9,7 +9,7 @@ def naive_string_match(input_string, founded_string):
         if j == m:
             print("Найдено вхождение в позиции " + str(i))
 
-input_string = 'string Some  stri string for this task string'
+input_string = 'string'
 founded_string = 'string'
 
 naive_string_match(input_string, founded_string)
