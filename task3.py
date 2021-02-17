@@ -1,8 +1,9 @@
-def str_comp(S, n, i1, i2):
+def str_comp(in_string, left_index, right_index):
     eq_len = 0
-    while i1 < n and i2 < n and S[i1] == S[i2]:
-        i1 += 1
-        i2 += 1
+    n = len(in_string)
+    while left_index < n and right_index < n and in_string[left_index] == in_string[right_index]:
+        left_index += 1
+        right_index += 1
         eq_len += 1
     return eq_len
 
@@ -15,7 +16,7 @@ def prefix_Z_values(S):
     for i in range(1, n):
         zp.append(0)
         if i >= r:
-            zp[i] = str_comp(S, n, 0, i)
+            zp[i] = str_comp(S, 0, i)
             l = i
             r = l + zp[i]
         else:
@@ -23,7 +24,7 @@ def prefix_Z_values(S):
             if zp[j] < r - i:
                 zp[i] = zp[j]
             else:
-                zp[i] = r - i + str_comp(S, n, r - i, r)
+                zp[i] = r - i + str_comp(S, r - i, r)
                 l = i
                 r = l + zp[i]
     return zp
