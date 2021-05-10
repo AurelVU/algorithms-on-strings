@@ -1,3 +1,5 @@
+# Алгоритм поиска z-значений
+
 def str_comp(in_string, left_index, right_index):
     eq_len = 0
     n = len(in_string)
@@ -30,9 +32,10 @@ def prefix_Z_values(S):
     return zp
 
 
-test_str = 'AABCAABXAAZ'
+if __name__ == '__main__':
+    test_str = 'AABCAABXAAZ'
 
-print(test_str)
-result = prefix_Z_values(test_str)
-for i in range(len(result)):
-    print(f'Z{i} = {result[i]}')
+    print(test_str)
+    result = prefix_Z_values(test_str)
+    for i in range(len(result)):
+        print(f'Z{i} = {result[i]}')

@@ -1,3 +1,5 @@
+# наивный алгоритм содержания подстроки в строке
+
 def naive_string_match(input_string, founded_string):
     n = len(input_string)
     m = len(founded_string)
@@ -9,7 +11,9 @@ def naive_string_match(input_string, founded_string):
         if j == m:
             print("Найдено вхождение в позиции " + str(i))
 
-input_string = 'string'
-founded_string = 'string'
 
-naive_string_match(input_string, founded_string)
+if __name__ == '__main__':
+    input_string = 'string'
+    founded_string = 'string'
+
+    naive_string_match(input_string, founded_string)

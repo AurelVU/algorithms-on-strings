@@ -1,3 +1,5 @@
+# наивный алгоритм нахождения длины максимальной грани
+
 def solver(input_string):
     for len_of_gran in reversed(range(1, len(input_string))):
         current_count = 0
@@ -8,12 +10,12 @@ def solver(input_string):
     return 0
 
 
+if __name__ == '__main__':
+    input_string = 'test_fdfshjdfs_testh_testf_testdh_testf_testkgfdhdfkg_test_jgfkdfl_test'
+    print('Максимальная длина грани: ', solver(input_string))
 
-input_string = 'test_fdfshjdfs_testh_testf_testdh_testf_testkgfdhdfkg_test_jgfkdfl_test'
-print('Максимальная длина грани: ', solver(input_string))
+    input_string = 'test'
+    print('Максимальная длина грани: ', solver(input_string))
 
-input_string = 'test'
-print('Максимальная длина грани: ', solver(input_string))
-
-input_string = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
-print('Максимальная длина грани: ', solver(input_string))
+    input_string = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    print('Максимальная длина грани: ', solver(input_string))
