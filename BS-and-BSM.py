@@ -28,7 +28,7 @@ if __name__ == '__main__':
         example = examples[i]
         print(f'Пример {i + 1}')
         bs = suffix_border_array(example)
-        print(f'bp : {bs}')
+        print(f'bs : {bs}')
         bsm = BS_to_BSM(bs, len(example))
-        print(f'bpm: {bsm}')
-        print(f'bp = {BSM_to_BS(bsm, len(example))}')
+        print(f'bsm: {bsm}')
+        print(f'bs = {BSM_to_BS(bsm, len(example))}')
