@@ -18,3 +18,9 @@ def KMP(pattern, text):
         if k == m:
             print(f"Вхождение с позиции {i - k + 1}\n")
             k = bpm[k - 1]
+
+
+if __name__ == '__main__':
+    text = 'abcabeabcabcabd'
+    pattern = 'abcabd'
+    KMP(pattern, text)
