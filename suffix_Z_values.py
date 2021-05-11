@@ -13,7 +13,7 @@ def suffix_Z_values(S):
     r = n - 1
     zs = [0] * n
     for i in reversed(range(0, n - 1)):
-        zs[i] = 0
+        # zs[i] = 0
         if i <= l:
             # Позиция i не покрыта Z-блоком – он вычисляется заново
             zs[i] = StrCompBack(S, i, n - 1)

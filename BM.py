@@ -53,6 +53,7 @@ def BM(pattern, text):
         # Продвижение по правилу
         nTextR += badChar_shift(pl, alphabet, text[i], k)
 
+
 s1 = 'ABCBCBCCDBABDFSB'
 s2 = 'BCBC'
 print(BM(s2, s1))
