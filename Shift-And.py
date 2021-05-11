@@ -1,11 +1,8 @@
 def shift_and(P, T):
     m = len(P)
     n = len(T)
-    # chBeg = '0'
-    # chEnd = 'z'  # Алфавит: от цифр до букв латиницы
-    # nA = ord(chEnd) - ord(chBeg) + 1  # Длина алфавита
     # # Подготовка массива вхождений
-    # B = [0] * nA
+
     B = {}
     for i in range(ord('A'), ord('Z') + 1):
         B[chr(i)] = 0
@@ -19,4 +16,10 @@ def shift_and(P, T):
     for i in range(n):
         M = (M >> 1 | uHigh) & B[T[i]]
         if M & 1:
-            print(f"Вхождение с позиции {i - m + 1}\n", )
+            print(f"Вхождение с позиции {i - m + 1}", )
+
+
+if __name__ == '__main__':
+    s1 = 'ABCBCBCCDBABDFSB'
+    s2 = 'BCBC'
+    shift_and(s2, s1)

@@ -33,4 +33,10 @@ def shift_and_fz(P, T, k):
                 M[l] |= (M1[l - 1] >> 1 | uHigh)  # Используем (i-1)-ю строку
             if l == k and M[l] & 1:
                 # Найдено вхождение
-                print(f"Вхождение с позиции {i - m + 1}\n")
+                print(f"Вхождение с позиции {i - m + 1}")
+
+
+if __name__ == '__main__':
+    s1 = 'ABCBCBCCDBCBDFSB'
+    s2 = 'BCBC'
+    shift_and_fz(s2, s1, 2)
