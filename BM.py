@@ -49,11 +49,12 @@ def BM(pattern, text):
 
         # Результаты сравнения
         if k < 0:
-            print(f"Вхождение с позиции {i + 1}\n")
+            print(f"Вхождение с позиции {i + 1}")
         # Продвижение по правилу
         nTextR += badChar_shift(pl, alphabet, text[i], k)
 
 
-s1 = 'ABCBCBCCDBABDFSB'
-s2 = 'BCBC'
-print(BM(s2, s1))
+if __name__ == '__main__':
+    s1 = 'ABCBCBCCDBABDFSB'
+    s2 = 'BCBC'
+    BM(s2, s1)
